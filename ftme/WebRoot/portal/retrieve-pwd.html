@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<link href="js/layer/2.1/skin/layer.css" rel="stylesheet" type="text/css" media="all">
+		<script src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/layer/2.1/layer.js" ></script>
+		<script type="text/javascript" src="js/retrieve-pwd.js"></script>
+	</head>
+	<body>
+		<form class="form form-horizontal" action="" method="post" id="form-admin-add">
+		<div style="margin-top: 40px;height: 80%;">
+			<div style="height: 40px;width: 100%;font-size: 14px;">
+				<p style="font-size: 16px;color: #333;font-family: '微软雅黑';line-height: 50px;"><span class="c-red" style="margin-left: 50px;margin-right:4px;color: red;line-height: 50px;">*</span>账号：
+				<input type="text" class="input-text" autocomplete="off" style="width: 50%;height: 24px;" value="" id="username" name="username"></p>
+			</div>
+			<div style="height: 40px;width: 100%;font-size: 14px;">
+				<p style="font-size: 16px;color: #333;font-family: '微软雅黑';line-height: 50px;height: 24px;"><span class="c-red"  style="margin-left: 50px;margin-right:4px;color: red;line-height: 50px;">*</span>姓名：
+				<input type="text" class="input-text" autocomplete="off"style="width: 50%;height: 24px;" id="uname" name="uname"></p>
+			</div>
+		</div>
+		<div class="row cl">
+			<div style="width: 100%;">
+				<input class="btn btn-primary radius"  id="butSel3" type="button" value="&nbsp;&nbsp;提交&nbsp;&nbsp;" style="margin: 60px 0 0 38%;width: 86px;height: 32px;background: #506a85;border: none;font-size: 14px;color: #fff;">
+			</div>
+		</div>
+	</form>
+	<script type="text/javascript">
+		function getContextPath(){
+		    var pathName = document.location.pathname;
+		    var index = pathName.substr(1).indexOf("/");
+		    var result = pathName.substr(0,index+1);
+		    return result;
+		};
+	</script>
+	</body>
+</html>

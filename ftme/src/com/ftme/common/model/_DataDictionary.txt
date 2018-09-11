@@ -1,0 +1,203 @@
+Table: clinical
+---------------+-------------+------+-----+---------+---------
+ Field         | Type        | Null | Key | Default | Remarks 
+---------------+-------------+------+-----+---------+---------
+ id            | INT(10)     | NO   | PRI |         | 主键      
+ clinicalNo    | VARCHAR(30) | YES  |     |         | 临床诊断编号  
+ clinicalname  | VARCHAR(30) | YES  |     |         | 临床诊断内容  
+ clinicalState | VARCHAR(2)  | YES  |     |         | 临床诊断状态：0可用，1不可以用
+ state         | VARCHAR(25) | YES  |     |         | 备用字段    
+---------------+-------------+------+-----+---------+---------
+
+Table: companyinfo
+------------------+-------------+------+-----+---------+---------
+ Field            | Type        | Null | Key | Default | Remarks 
+------------------+-------------+------+-----+---------+---------
+ id               | INT(10)     | NO   | PRI |         | 主键      
+ companyName      | VARCHAR(34) | YES  |     |         | 公司名称    
+ companyPhone     | VARCHAR(20) | YES  |     |         | 联系方式    
+ companyAddress   | VARCHAR(60) | YES  |     |         | 公司地址    
+ companyIntroduce | TEXT(65535) | YES  |     |         | 公司简介    
+ companyEmail     | VARCHAR(40) | YES  |     |         | 公司邮箱    
+ state            | VARCHAR(25) | YES  |     |         | 备用字段    
+------------------+-------------+------+-----+---------+---------
+
+Table: documentinfo
+--------------------+--------------+------+-----+-------------------+---------
+ Field              | Type         | Null | Key | Default           | Remarks 
+--------------------+--------------+------+-----+-------------------+---------
+ id                 | INT(10)      | NO   | PRI |                   | 主键      
+ documentNo         | VARCHAR(30)  | YES  |     |                   | 文档编号    
+ userNo             | VARCHAR(30)  | YES  |     |                   | 患者的编号   
+ hospitalNo         | VARCHAR(30)  | YES  |     |                   | 所属医院    
+ hospitalname       | VARCHAR(30)  | YES  |     |                   | 医院名称    
+ doctorNo           | VARCHAR(30)  | YES  |     |                   | 所属医生编号  
+ doctorname         | VARCHAR(30)  | YES  |     |                   | 所属医生名称  
+ name               | VARCHAR(20)  | YES  |     |                   | 患者的名称（管理员查询的检索字段）
+ phone              | VARCHAR(20)  | YES  |     |                   | 手机号（管理员查询的检索字段）
+ documentType       | VARCHAR(30)  | YES  |     |                   | 文档类别(遗传诊断报告,基因的测序结果,诊断病例分析)
+ documentName       | VARCHAR(34)  | YES  |     |                   | 文档名称    
+ documentUploadName | VARCHAR(34)  | YES  |     |                   | 文档上传后的新文档名称
+ uploadPath         | VARCHAR(80)  | YES  |     |                   | 在服务器的绝对路径
+ documentPath       | VARCHAR(40)  | YES  |     |                   | 文档上传路径  
+ admin              | VARCHAR(30)  | YES  |     |                   | 上传者(当前登录者)
+ remark             | TEXT(65535)  | YES  |     |                   | 备注      
+ documentState      | VARCHAR(2)   | YES  |     |                   | 状态（本患者是否已经下载过遗传诊断报告：0可下载，1不可下载）
+ datetime           | DATETIME(19) | YES  |     | CURRENT_TIMESTAMP | 上传时间    
+ state              | VARCHAR(25)  | YES  |     |                   | 备用字段    
+--------------------+--------------+------+-----+-------------------+---------
+
+Table: hospital
+---------------+-------------+------+-----+---------+---------
+ Field         | Type        | Null | Key | Default | Remarks 
+---------------+-------------+------+-----+---------+---------
+ id            | INT(10)     | NO   | PRI |         | 主键      
+ hospitalNo    | VARCHAR(30) | YES  |     |         | 医院编号    
+ hospitalname  | VARCHAR(30) | YES  |     |         | 医院名称    
+ hospitalState | VARCHAR(2)  | YES  |     |         | 医院状态:0可用，1不可以用
+ state         | VARCHAR(25) | YES  |     |         | 备用字段    
+---------------+-------------+------+-----+---------+---------
+
+Table: interactive
+------------------+--------------+------+-----+-------------------+---------
+ Field            | Type         | Null | Key | Default           | Remarks 
+------------------+--------------+------+-----+-------------------+---------
+ id               | INT(10)      | NO   | PRI |                   | ID      
+ interactiveNo    | VARCHAR(30)  | YES  |     |                   | 联系我们编号  
+ name             | VARCHAR(25)  | YES  |     |                   | 名称      
+ phone            | VARCHAR(255) | YES  |     |                   | 联系电话    
+ content          | VARCHAR(255) | YES  |     |                   | 提交内容    
+ interactiveState | VARCHAR(2)   | YES  |     |                   | 联系我们的状态：0未查看、1已查看
+ datetime         | DATETIME(19) | YES  |     | CURRENT_TIMESTAMP | 提交时间    
+ state            | VARCHAR(25)  | YES  |     |                   | 备用字段    
+------------------+--------------+------+-----+-------------------+---------
+
+Table: items
+------------+--------------+------+-----+---------+---------
+ Field      | Type         | Null | Key | Default | Remarks 
+------------+--------------+------+-----+---------+---------
+ id         | INT(10)      | NO   | PRI |         |         
+ itemsNo    | VARCHAR(30)  | YES  |     |         | 检测项目编号  
+ itemsname  | VARCHAR(30)  | YES  |     |         | 检测项目名称  
+ remark     | VARCHAR(200) | YES  |     |         | 基因检测项目备注
+ itemsState | VARCHAR(2)   | YES  |     |         | 检测项目状态:0可用，1不可以用
+ state      | VARCHAR(25)  | YES  |     |         | 备用字段    
+------------+--------------+------+-----+---------+---------
+
+Table: news
+----------+--------------+------+-----+-------------------+---------
+ Field    | Type         | Null | Key | Default           | Remarks 
+----------+--------------+------+-----+-------------------+---------
+ id       | INT(10)      | NO   | PRI |                   | 主键      
+ newsNo   | VARCHAR(30)  | YES  |     |                   | 行业动态编号  
+ title    | VARCHAR(25)  | YES  |     |                   | 名称      
+ content  | TEXT(65535)  | YES  |     |                   | 内容      
+ datetime | DATETIME(19) | YES  |     | CURRENT_TIMESTAMP | 添加时间    
+ admin    | VARCHAR(45)  | YES  |     |                   | 添加者（当前登录者）
+ state    | VARCHAR(25)  | YES  |     |                   | 备用字段    
+----------+--------------+------+-----+-------------------+---------
+
+Table: permissions
+-------------------+-------------+------+-----+---------+---------
+ Field             | Type        | Null | Key | Default | Remarks 
+-------------------+-------------+------+-----+---------+---------
+ id                | INT(10)     | NO   | PRI |         | 主键      
+ permissionsidNo   | VARCHAR(30) | YES  |     |         | 权限编号    
+ hierarchy         | INT(10)     | YES  |     |         | 层级：是功能名称还是里面的具体操作：1模块名称，2页面链接，3功能按钮
+ permissionsidName | VARCHAR(34) | YES  |     |         | 具体信息（该权限的介绍）
+ icon              | VARCHAR(30) | YES  |     |         | 前缀图标    
+ linkstyle         | VARCHAR(30) | YES  |     |         | 链接样式    
+ monikeri          | VARCHAR(40) | YES  |     |         | 链接路径    
+ linkname          | VARCHAR(30) | YES  |     |         | 链接名称    
+ superior          | VARCHAR(30) | YES  |     |         | 那个功能模块下的功能(记录归属编号）
+ state             | VARCHAR(25) | YES  |     |         | 备用字段    
+-------------------+-------------+------+-----+---------+---------
+
+Table: pictureinfo
+-------------+--------------+------+-----+---------+---------
+ Field       | Type         | Null | Key | Default | Remarks 
+-------------+--------------+------+-----+---------+---------
+ id          | INT(10)      | NO   | PRI |         | 主键      
+ pictureNo   | VARCHAR(30)  | YES  |     |         | 图片编号    
+ picturename | VARCHAR(34)  | YES  |     |         | 标题      
+ picturePath | VARCHAR(80)  | YES  |     |         | 图片存储路径  
+ content     | VARCHAR(255) | YES  |     |         | 内容      
+ state       | VARCHAR(25)  | YES  |     |         | 备用字段    
+-------------+--------------+------+-----+---------+---------
+
+Table: role
+----------+-------------+------+-----+---------+---------
+ Field    | Type        | Null | Key | Default | Remarks 
+----------+-------------+------+-----+---------+---------
+ id       | INT(10)     | NO   | PRI |         | 主键      
+ roleNo   | VARCHAR(30) | YES  |     |         | 角色编号    
+ roleType | VARCHAR(25) | YES  |     |         | 角色（0=超级管理员，1=管理员，2=员工，3=医生,4=患者）
+ state    | VARCHAR(25) | YES  |     |         | 备用字段    
+----------+-------------+------+-----+---------+---------
+
+Table: rolepermissions
+-----------------+-------------+------+-----+---------+---------
+ Field           | Type        | Null | Key | Default | Remarks 
+-----------------+-------------+------+-----+---------+---------
+ id              | INT(10)     | NO   | PRI |         | 主键      
+ userNo          | VARCHAR(30) | YES  |     |         | 用户id（管理员）
+ permissionsidNo | VARCHAR(30) | YES  |     |         | 拥有的权限   
+ superior        | VARCHAR(30) | YES  |     |         | 那个功能模块下的功能(记录归属编号）
+ state           | VARCHAR(25) | YES  |     |         | 备用字段    
+-----------------+-------------+------+-----+---------+---------
+
+Table: smsrecord
+----------+-------------+------+-----+---------+---------
+ Field    | Type        | Null | Key | Default | Remarks 
+----------+-------------+------+-----+---------+---------
+ id       | INT(10)     | NO   | PRI |         | ID      
+ smsNo    | VARCHAR(30) | YES  |     |         | 短信状态编号  
+ userNo   | VARCHAR(30) | YES  |     |         | 发送对象的编号 
+ name     | VARCHAR(30) | YES  |     |         | 用户名称    
+ phone    | VARCHAR(30) | YES  |     |         | 手机号     
+ smsType  | VARCHAR(2)  | YES  |     |         | 1:找回密码CODE, 2:对患者进行通知CODE, 3:检测报告通知CODE
+ smsState | VARCHAR(10) | YES  |     |         | 短信发送状态  
+ state    | VARCHAR(30) | YES  |     |         | 备用字段    
+----------+-------------+------+-----+---------+---------
+
+Table: testresults
+------------------+-------------+------+-----+---------+---------
+ Field            | Type        | Null | Key | Default | Remarks 
+------------------+-------------+------+-----+---------+---------
+ id               | INT(10)     | NO   | PRI |         | 主键      
+ testresultsNo    | VARCHAR(30) | YES  |     |         | 基因检测结果编号
+ testresultsname  | VARCHAR(30) | YES  |     |         | 基因检测结果  
+ testresultsState | VARCHAR(2)  | YES  |     |         | 基因检测结果状态:0可用，1不可以用
+ state            | VARCHAR(25) | YES  |     |         | 备用字段    
+------------------+-------------+------+-----+---------+---------
+
+Table: userinfo
+-----------------+--------------+------+-----+-------------------+---------
+ Field           | Type         | Null | Key | Default           | Remarks 
+-----------------+--------------+------+-----+-------------------+---------
+ id              | INT(10)      | NO   | PRI |                   | 主键      
+ userNo          | VARCHAR(30)  | YES  |     |                   | 用户编号    
+ roleNo          | VARCHAR(30)  | YES  |     |                   | 自己的角色id 
+ roleType        | VARCHAR(20)  | YES  |     |                   | 角色(超级管理员，患者，员工，管理员,医生)（当时患者注册时不需要审核可直接存入数据库中）
+ hospitalNo      | VARCHAR(30)  | YES  |     |                   | 医生和患者所属医院医院
+ hospitalname    | VARCHAR(30)  | YES  |     |                   | 医院名称    
+ uno             | VARCHAR(30)  | YES  |     |                   | 如果是患者，填写所属医生的userno；如果不是：填写操作者的userno
+ doctorname      | VARCHAR(30)  | YES  |     |                   | 患者治疗医生  
+ clinicalname    | VARCHAR(30)  | YES  |     |                   | 临床诊断内容  
+ itemsname       | VARCHAR(30)  | YES  |     |                   | 检测项目名称  
+ testresultsname | VARCHAR(30)  | YES  |     |                   | 基因检测结果  
+ username        | VARCHAR(25)  | YES  |     |                   | 账号      
+ password        | VARCHAR(25)  | YES  |     |                   | 密码      
+ name            | VARCHAR(20)  | YES  |     |                   | 姓名      
+ sex             | INT(10)      | YES  |     |                   | 性别1男0女  
+ email           | VARCHAR(35)  | YES  |     |                   | 邮箱      
+ phone           | VARCHAR(20)  | YES  |     |                   | 手机号（员工和医生注册时需要审批，此时手机号未必填项，审批时结果通过短信通知;在后台查询时可以通过手机号查询，所以为必填项）
+ courierInfo     | VARCHAR(45)  | YES  |     |                   | 快递单号    
+ remark          | VARCHAR(200) | YES  |     |                   | 备注      
+ datetime        | DATETIME(19) | YES  |     | CURRENT_TIMESTAMP | 注册时间    
+ accountState    | INT(10)      | YES  |     |                   | 账号状态（0未审批，1审批通过，2审批未通过，大于等于3的都是被删除的（当前状态加3为删除状态）
+ emailState      | INT(10)      | YES  |     |                   | 邮箱状态（是否已经激活：0激活，1未激活）
+ courierState    | VARCHAR(25)  | YES  |     |                   | 短信状态    
+ state           | VARCHAR(25)  | YES  |     |                   | 备用字段    
+-----------------+--------------+------+-----+-------------------+---------
+

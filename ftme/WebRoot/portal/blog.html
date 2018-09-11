@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>行业动态</title>
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+		<link href="css/front-style.css" rel="stylesheet" type="text/css" media="all" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Seen Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<script type="application/x-javascript">
+			addEventListener("load", function() {
+				setTimeout(hideURLbar, 0);
+			}, false);
+
+			function hideURLbar() {
+				window.scrollTo(0, 1);
+			}
+		</script>
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Fugaz+One' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="js/artTemplate/template-native.js" ></script>
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/responsiveslides.min.js"></script>
+		<script>
+			$(function() {
+				$("#slider").responsiveSlides({
+					auto: true,
+					nav: true,
+					speed: 500,
+					namespace: "callbacks",
+					pager: true
+				});
+			});
+		</script>
+
+		<!---- start-smoth-scrolling---->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<!---End-smoth-scrolling----
+
+</head>
+<body>
+<!-- header -->
+		<div class="container">
+			<div class="header-bottom">
+				<div class="logo">
+				<a id="logoImg" href="index.html"><img src="images/jiyin0.jpg"></a>
+				</div>
+				<div class="top-menu">
+					<span class="menu"><img src="images/nav-icon.png" alt=""/></span>
+					<ul class="navTop">
+						
+							<li>
+								<a href="index.html" style="background: #fff;"><span data-hover="首页">首页</span></a>
+							</li>
+							<li>
+								<a href="portfolio.html" style="background: #fff;"><span data-hover="公司简介">公司简介</span></a>
+							</li>
+							<li>
+								<a href="blog.html" class="active" style="background: #fff;"><span data-hover="新闻动态">新闻动态</span></a>
+							</li>
+							<!--<li><a href="pages.html"><span data-hover="pages">错误页面（可以不管）</span></a></li>-->
+							<li>
+								<a href="features.html" style="background: #fff;"><span data-hover="医学检验">医学检验</span></a>
+							</li>
+							<li>
+								<a href="recruitment.html" style="background: #fff;"><span data-hover="诚聘英才">诚聘英才</span></a>
+							</li>
+							<li>
+								<a href="connection.html" style="background: #fff;"><span data-hover="联系我们">联系我们</span></a>
+							</li>
+							<!--<li><a href="contact.html"><span data-hover="contact">contact</span></a></li>-->
+						
+					</ul>
+					<span class="tel"><img src="images/tel.png"></span>
+					
+				</div>
+				<!--script-nav-->
+				<!-- <script type="text/javascript">
+					$("span.menu").onclick(function() {
+						$(".top-menu ul").slideToggle("slow", function() {});
+					});
+				</script> -->
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		</div>
+
+		<div class="new"><img src="images/new.png"></div>
+		<!-- content-section-starts -->
+		<div class="blog-content">
+			<div class="container">
+				<div class="section group">
+					<div class="blog-grids">
+						<div class="cont span_2_of_3">
+							<div class="col-md-12 blog-grid" id="blogListHTML">
+								<script id="blogList" type="text/html">
+									<% for(var i=0,j=blogList.length; i<j;i++){ %>
+									 	<div class="blog_posts">
+												<div class="blog_heading">
+													<a href="single.html?newsNo=<%=blogList[i].newsNo%>"><%=blogList[i].title%></a>
+													<p><%=blogList[i].day%>年</span><%=blogList[i].month%>月</a>
+													</p>
+												</div>
+												<div class="blog_data">
+													<p><%=blogList[i].content%></p>
+													<div class="more">
+														<a class="moreHtml" href="single.html?newsNo=<%=blogList[i].newsNo%>">查看更多&gt;&gt;</a>
+													</div>
+												</div>
+												<div class="clearfix"></div>
+										</div>
+									<%}%>
+								</script>
+								<!--
+								<div class="blog_posts">
+									
+									<div class="blog_desc">
+										<div class="blog_heading">
+											<a href="single.html">遗传病基因分析大杀器来袭</a>
+											<p>2017年1月19来自</a>
+											</p>
+										</div>
+
+										<div class="blog_data">
+											<p>单基因遗传病种类繁多，表型复杂，诊断一直是世界级难题。高通量测序技术（包括全外显子组测序及定制Panel检测）仅仅完成了前半程——基因数据采集，得到的只是原始的突变集合，更为关键的是后半程——基因数据分析，即从海量基因突变数据中大海捞针，精准定位患者的致病突变，这是精准医学时代所关注的焦点。单基因遗传病种类繁多，表型复杂，诊断一直是世界级难题。高通量测序技术（包括全外显子组测序及定制Panel检测）仅仅完成了前半程——基因数据采集，得到的只是原始的突变集合，更为关键的是后半程——基因数据分析，即从海量基因突变数据中大海捞针，精准定位患者的致病突变，这是精准医学时代所关注的焦点。</p>
+											<div class="more">
+												<a class="moreHtml" href="single.html">查看更多&gt;&gt;</a>
+											</div>
+										</div>
+
+										<div class="clearfix"></div>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<div class="blog_posts">
+									
+									<div class="blog_desc">
+										<div class="blog_heading">
+											<a href="single.html">遗传病基因分析大杀器来袭</a>
+											<p>2017年1月19来自</a>
+											</p>
+										</div>
+
+										<div class="blog_data">
+											<p>单基因遗传病种类繁多，表型复杂，诊断一直是世界级难题。高通量测序技术（包括全外显子组测序及定制Panel检测）仅仅完成了前半程——基因数据采集，得到的只是原始的突变集合，更为关键的是后半程——基因数据分析，即从海量基因突变数据中大海捞针，精准定位患者的致病突变，这是精准医学时代所关注的焦点。单基因遗传病种类繁多，表型复杂，诊断一直是世界级难题。高通量测序技术（包括全外显子组测序及定制Panel检测）仅仅完成了前半程——基因数据采集，得到的只是原始的突变集合，更为关键的是后半程——基因数据分析，即从海量基因突变数据中大海捞针，精准定位患者的致病突变，这是精准医学时代所关注的焦点。</p>
+											<div class="more">
+												<a class="moreHtml" href="single.html">查看更多&gt;&gt;</a>
+											</div>
+										</div>
+
+										<div class="clearfix"></div>
+									</div>
+									<div class="clearfix"></div>
+								</div>-->
+								
+							</div>
+							<div class="content-pagenation">
+							</div>
+						</div>
+
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- content-section-ends -->
+		<div class="contact-section">
+			<div class="container">
+				<div class="contact-grids">
+					<div class="contact-grid" style="width: 33%;float: left;">
+						<div class="logo" style="margin: 20px 0;">
+							<a id="logoImg" href="index.html" style="margin-bottom: 20px !important;"><img src="images/logo.png"></a>
+						</div>
+						<div class="icon2">
+							<ul id="bottomHTML">
+								<li class="label1">
+									电话：
+								</li>
+								<li class="label2">
+									地址：
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="contact-grid" style="width: 39%;float: left;">
+						<h4>Copyrihgt @2015-2016 </h4>
+						<h6>北京中因科技有限公司版权所有</h6>
+					</div>
+					<div class="contact-grid" style="width: 22%;float: right;height: 172px;">
+						<p id="wechat" style="width: 100%;"><img src="images/zy.jpg" style="width: 6em;margin-left: 140px;"></p>
+						<p id="sao" style="float: right;margin: 0.5em 21px 0 3em;">微信扫一扫添加我们</p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						/*
+							var defaults = {
+					  			containerID: 'toTop', // fading element id
+								containerHoverID: 'toTopHover', // fading element hover id
+								scrollSpeed: 1200,
+								easingType: 'linear' 
+					 		};
+							*/
+						$().UItoTop({
+							easingType: 'easeOutQuart'
+						});
+					});
+				</script>
+				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+			</div>
+		</div>
+		<script type="text/javascript">
+		function getContextPath(){     
+		    var pathName = document.location.pathname;     
+		    var index = pathName.substr(1).indexOf("/");     
+		    var result = pathName.substr(0,index+1);     
+		    return result;     
+		};
+		function bloglist(begin){
+			$.post("/ftme/portal/blogJson",{"begin":begin},function(result){
+				//console.dir(result);
+				if(result.blogList!=null){
+					var html =template("blogList", result);
+					document.getElementById("blogListHTML").innerHTML = html;
+					$(".content-pagenation").empty();
+					$(".content-pagenation").append('<span>当前页'+result.fy.current+'共'+result.fy.allpages+'页</span>  <ul>   <li><a href="javascript:;" onclick="bloglist(1)">首页</a></li><li><a href="javascript:;" onclick="bloglist('+result.fy.up+')">上一页</a></li><li><a href="javascript:;" onclick="bloglist('+result.fy.next+')">下一页</a></li><li><a href="javascript:;" onclick="bloglist('+result.fy.allpages+')">尾页</a></li></ul>');
+				}
+			});
+		};
+		$(function(){
+			$.get("/ftme/portal/portalCompanyJson",function(result){
+				if(result.company!=null){
+					$(".label1").append(result.company.companyPhone);
+					$(".label2").append(result.company.companyAddress);
+					$(".portfolioMain").append(result.company.companyIntroduce);
+				}
+			});
+			$.get("/ftme/portal/blogJson",function(result){
+				//console.dir(result);
+				if(result.blogList!=null){
+					var html =template("blogList", result);
+					document.getElementById("blogListHTML").innerHTML = html;
+					$(".content-pagenation").append('<span>当前页'+result.fy.current+'共'+result.fy.allpages+'页</span>  <ul>   <li><a href="javascript:;" ononclick="bloglist(1)">首页</a></li><li><a href="javascript:;" onclick="bloglist('+result.fy.up+')">上一页</a></li><li><a href="javascript:;" onclick="bloglist('+result.fy.next+')">下一页</a></li><li><a href="javascript:;" onclick="bloglist('+result.fy.allpages+')">尾页</a></li></ul>');
+				}
+			});
+//	$(".content-pagenation").append('<span>当前页'+'共'+'页 </span>  <ul> <li><a href="javascript:;" ononclick="bloglist(1)">首页</a></li><li><a href="javascript:;" onclick="bloglist('+')">上一页</a></li><li><a href="javascript:;" onclick="bloglist('+')">下一页</a></li><li><a href="javascript:;" onclick="bloglist('+')">尾页</a></li></ul> ');
+		});
+			
+		</script>
+	</body>
+
+</html>

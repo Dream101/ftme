@@ -1,0 +1,285 @@
+<!--
+Au<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>首页</title>
+		<link href="js/layer/2.1/skin/layer.css" rel="stylesheet" type="text/css" media="all">
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+		<link href="css/front-style.css" rel="stylesheet" type="text/css" media="all" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="application/x-javascript">
+			addEventListener("load", function() {
+				setTimeout(hideURLbar, 0);
+			}, false);
+			function hideURLbar() {
+				window.scrollTo(0, 1);
+			}
+		</script>
+		<script src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/artTemplate/template-native.js" ></script>
+		<script type="text/javascript" src="js/layer/2.1/layer.js" ></script>
+		<script type="text/javascript" src="js/portal.js"></script>		
+		<script type="text/javascript" src="js/login.js"></script>
+		<!--
+	      	作者：offline
+	      	时间：2017-01-17
+	      	描述：responsiveslides.min.js是LOGO的js(31-42行)
+	      -->
+		<script src="js/responsiveslides.min.js"></script>
+
+		<!---- start-smoth-scrolling     描述：move-top.js导航--->
+		<script type="text/javascript" src="js/move-top.js"></script>
+
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event) {
+					event.preventDefault();
+					$('html,body').animate({
+						scrollTop: $(this.hash).offset().top
+					}, 1200);
+				});
+			});
+		</script>
+		<!---End-smoth-scrolling---->
+
+	</head>
+
+	<body onload="indexBlur()">
+		<div class="container">
+			<div class="header-bottom">
+				<div class="logo">
+					<a id="logoImg" href="index.html"><img src="images/jiyin0.jpg"></a>
+				</div>
+				<div class="top-menu">
+					<span class="menu"><img src="images/nav-icon.png" alt=""/></span>
+						<ul class="navTop">
+							<li>
+								<a href="index.html" class="active" style="background: #fff;"><span data-hover="首页">首页</span></a>
+							</li>
+							<li>
+								<a href="portfolio.html" style="background: #fff;"><span data-hover="公司简介">公司简介</span></a>
+							</li>
+							<li>
+								<a href="blog.html" style="background: #fff;"><span data-hover="新闻动态">新闻动态</span></a>
+							</li>
+							<!--<li><a href="pages.html"><span data-hover="pages">错误页面（可以不管）</span></a></li>-->
+							<li>
+								<a href="features.html" style="background: #fff;"><span data-hover="医学检验">医学检验</span></a>
+							</li>
+							<li>
+								<a href="recruitment.html" style="background: #fff;"><span data-hover="诚聘英才">诚聘英才</span></a>
+							</li>
+							<li>
+								<a href="connection.html" style="background: #fff;"><span data-hover="联系我们">联系我们</span></a>
+							</li>
+							<!--<li><a href="contact.html"><span data-hover="contact">contact</span></a></li>-->
+						
+					</ul>
+					<span class="tel"><img src="images/tel.png"></span>
+					
+				</div>
+				<!--script-nav-->
+				<script>
+					$("span.menu").click(function() {
+						$(".top-menu ul").slideToggle("slow", function() {});
+					});
+				</script>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		</div>
+
+		<!-- header-section-ends 	LOGO的div -->
+		<div class="header-slider">
+			<div class="slider">
+				<div class="callbacks_container">
+					<ul class="rslides">
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<!--
+			放置内容
+        -->
+		<div class="beautifull">
+			<div class="container">
+				<div class="beautifull-header">
+					<div class="introduce">
+						<h4>公司介绍</h4>
+						<p>北京中因科技有限公司成立于2016年1月, 是一家专业从事遗传性眼病临床基因诊断的企业。</p>
+						<p>本公司基因诊断平台是国内最早开展遗传性眼病临床基因诊断的平台之一。自2011年至今，已经为1500余例遗传性眼病患者提供基因检测，确保了检测方法的科学性、检测结果的准确性和检测流程的成熟可靠，检测报告的医学遗传解释部分由知名遗传学家和眼科专家参与撰写和审阅，确保基因诊断结果与临床表型相符，为广大临床医生和患者提供参考性和可读性更强的遗传咨询报告。</p>
+					</div>
+
+					<div class="loginMain">
+						<div class="title">患者眼科遗传病信息报告查询入口</div>
+						<div class="bigBox" id="bigBox3">
+							<div class="box" id="box">
+								<ul>
+									<li class="li1 hover" style="font-size: 16px;">医生登录</li>
+									<li class="li2" style="font-size: 16px;">患者登录</li>
+								</ul>
+
+							</div>
+							<div class="boxDivv" style="margin-top: 20px !important;margin-left: 20px !important;width: 95% !important;"   >
+								<div class="box1Div1" style="display: block;width: 88%;">
+									<label for="userName" style="font-size:14px;float: left;color: #506a85;height: 0.9em;">用户名</label>
+    								<input type="text" id="userName1" placeholder="您的用户名" />
+    								<label for="passwordName" style="font-size:14px;float: left;color: #506a85;height: 0.9em;margin-top: 1.8em;">密&nbsp;&nbsp;&nbsp;&nbsp;码</label>
+    								<input type="password" id="password1" placeholder="您的密码" />
+    								<button class="login" id="butSel1">登&nbsp;录</button>
+    								<span  class="forget" onclick="retrievePwd('找回密码','retrieve-pwd.html')">忘记密码</span>
+								</div>
+								<div class="box1Div2" style="display: none;width: 88%;">
+									<label for="userName" style="font-size:14px;float: left;color: #506a85;height: 0.9em;">用户名</label>
+    								<input type="text" id="userName2" placeholder="您的用户名" />
+    								<label for="passwordName" style="font-size:14px;float: left;color: #506a85;height: 0.9em;margin-top: 1.8em;">密&nbsp;&nbsp;&nbsp;&nbsp;码</label>
+    								<input type="password" id="password2" placeholder="您的密码" />
+    								<button class="login" id="butSel2">登&nbsp;录</button>
+    								<span  class="forget" onclick="retrievePwd('找回密码','retrieve-pwd.html')">忘记密码</span>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+
+					<div class="introduce" style="margin-right: 0 !important;width: 326px;">
+						<h4>公司愿景</h4>
+						<p>希望通过持之以恒的努力，建立专业、可靠、诚信、权威的遗传性眼病临床基因诊断平台；通过婚前、孕前或产前的基因诊断有效预防严重遗传性眼病患儿的出生；为遗传性眼病患者提供有效的转基因治疗，建立世界一流的遗传性眼病基因诊断、预防和治疗中心。</p>
+
+					</div>
+				</div>
+				<div class="grids">
+				<div class="grid">
+					<img src="images/prodect.png" />
+
+				</div>
+				<div class="grid">
+					<img src="images/indeuster.png" />
+				</div>
+				<div class="grid2">
+					<h4 style="width: 378px !important;text-align: left;">技术优势 </h4>
+					<h5>Technical advantage</h5>
+					<p style="text-align: left;">目前主要接受北医三院眼科和同仁医院眼科送检样本，获得相关医生和患者的认可</p>
+				</div>
+				
+			</div>
+			</div>
+			
+		</div>
+		</div>
+
+		<!--
+        	页脚
+        -->
+		<div class="contact-section">
+			<div class="container">
+				<div class="contact-grids">
+					<div class="contact-grid" style="width: 33%;float: left;">
+						<div class="logo" style="margin: 20px 0;">
+							<a id="logoImg" href="index.html" style="margin-bottom: 20px !important;"><img src="images/logo.png"></a>
+						</div>
+						<div class="icon2">
+							<ul id="bottomHTML">
+								<li class="label1">
+									电话：
+								</li>
+								<li class="label2">
+									地址：
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="contact-grid" style="width: 39%;float: left;">
+						<h4>Copyrihgt @2015-2016 </h4>
+						<h6>北京中因科技有限公司版权所有</h6>
+					</div>
+					<div class="contact-grid" style="width: 22%;float: right;height: 172px;">
+						<p id="wechat" style="width: 100%;"><img src="images/zy.jpg" style="width: 6em;margin-left: 140px;"></p>
+						<p id="sao" style="float: right;margin: 0.5em 21px 0 3em;">微信扫一扫添加我们</p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		function getContextPath(){     
+		    var pathName = document.location.pathname;     
+		    var index = pathName.substr(1).indexOf("/");     
+		    var result = pathName.substr(0,index+1);     
+		    return result;     
+		};
+		function indexBlur() {
+			$.get("/ftme/portal/portalJson",function(result){
+				//console.dir(result);
+				if(result.logo != null){
+					$.each(result.logo, function(index,logo) {
+						$(".rslides").append('<li><img src='+getContextPath()+logo.picturePath+' alt="" ><div class="caption" ><h3>'+logo.picturename+'</h3><p>'+logo.content+'</p></div></li>');
+					});
+					$(".rslides").responsiveSlides({
+						auto: true,
+						nav: true,
+						speed: 500,
+						namespace: "callbacks",
+						pager: true
+					});
+				}
+				if(result.company!=null){
+					$(".label1").append(result.company.companyPhone);
+					$(".label2").append(result.company.companyAddress);
+				}
+			});
+			$(".li1").click(function() {
+				$(".li1").addClass("hover");
+				$(".box1Div1").css("display","block");
+				$(".li2").removeClass("hover");
+				$(".box1Div2").css("display","none");
+			});
+			$(".li2").click(function() {
+				$(".li2").addClass("hover");
+				$(".box1Div2").css("display","block");
+				$(".li1").removeClass("hover");
+				$(".box1Div1").css("display","none");
+			});
+		};
+		function retrievePwd(title,url){
+
+			/* layer.open({
+			  type: 2,
+			  shade: false,
+			  area: '500px',
+			  maxmin: true,
+			  content: url,
+			  zIndex: layer.zIndex, //重点1
+			  success: function(layero){
+			  }
+			}); */   
+			layer.open({
+			  type: 2,
+			  title: title, //title,
+			  offset: ['30%', '40%'],
+			  shadeClose: true,
+			  fixed:true,
+			  scrollbar:false,
+			  //shade: 0.8,
+			  area: ['500px', '320px'],
+			  content: url
+			  
+			}); 
+			
+		};
+	</script>
+
+</html>
